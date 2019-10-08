@@ -1,0 +1,97 @@
+.navbar {
+    width: 330px;
+    height: 100vh;
+    background: #1e2037;
+    display: grid;
+    grid-template-rows: 1fr 10fr 1fr;
+
+    &__logo {
+        text-align: center;
+        padding: 30px 0;
+        background: #2b2c44;
+    }
+
+    &__navigation {
+        margin-top: 56px;
+        padding-left: 50px;
+
+        li:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color: #837f92;
+            position: relative;
+            padding: 10px 0;
+            transition: .3s ease-out;
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 4px;
+                height: 100%;
+                background: transparent;
+                border-radius: 10px;
+                transition: .3s ease-out;
+            }
+
+            &:hover {
+                color: #fff;
+
+                &:after {
+                    background: #ed1847;
+                }
+
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .active {
+            color: #fff;
+
+            &:after {
+                background: #ed1847;
+            }
+
+            svg path {
+                fill: #fff;
+            }
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+
+            path {
+                transition: .3s ease-out;
+            }
+        }
+    }
+
+    &__footer {
+        padding-left: 50px;
+        color: #6d6d81;
+        width: 100%;
+
+        .copyright {
+            padding-top: 40px;
+            border-top: 1px solid #3a3c57;
+        }
+
+        p {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin-right: 10px;
+        }
+    }
+}

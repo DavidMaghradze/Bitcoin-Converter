@@ -1,0 +1,82 @@
+.converter {
+
+    &__form {
+        display: flex;
+        align-items: center;
+
+        button {
+            cursor: pointer;
+            display: inline-flex;
+            width: 66px;
+            height: 66px;
+            border-radius: 50%;
+            background: #ed1847;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px -8px rgba(237, 24, 71, .5);
+            margin: 0 60px;
+            transition: .3s ease-out;
+
+            &:hover {
+                box-shadow: 0 10px 20px -6px rgba(237, 24, 71, .8);
+            }
+        }
+
+        span {
+            display: block;
+            width: calc(50% - 66px);
+            position: relative;
+
+            &:first-child:after {
+                content: 'BTC';
+                position: absolute;
+                right: 40px;
+                bottom: 8px;
+                font-size: 14px;
+            }
+
+            &:last-child:after {
+                content: 'GEL';
+                position: absolute;
+                right: 40px;
+                bottom: 8px;
+                font-size: 14px;
+            }
+        }
+
+        input {
+            outline: none;
+            border: none;
+            width: 100%;
+            font-size: 30px;
+            border-bottom: 2px solid #e3e2e6;
+            transition: .3s ease-out;
+            position: relative;
+            padding-bottom: 5px;
+
+            &::placeholder {
+                font-size: 30px;
+            }
+
+            &:focus {
+                border-bottom: 2px solid #ed1847;
+                color: #ed1847;
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    .converter__form {
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        span {
+            width: 100%;
+        }
+
+        button {
+            margin: 20px 0;
+        }
+    }
+}

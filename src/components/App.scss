@@ -1,0 +1,60 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: BPGArial;
+    src: url('../fonts/bpg_arial_2009.ttf');
+}
+
+body {
+    font-family: BPGArial;
+}
+
+.app-wrapper {
+    display: flex;
+}
+
+.main-content {
+    width: calc(100% - 330px);
+    height: 100vh;
+    background: #f4f4f7; 
+    overflow-y: auto;
+}
+
+main {
+    margin: 30px 50px 40px 50px;
+
+    > div {
+        border-radius: 40px;
+        background: #fff;
+        padding: 50px 60px;
+        box-shadow: 0 2px 16px rgba(76, 65, 118, .1);
+    }
+}
+
+.main-block-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}

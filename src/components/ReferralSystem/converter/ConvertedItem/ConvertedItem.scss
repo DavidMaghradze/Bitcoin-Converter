@@ -1,0 +1,75 @@
+.value-list {
+    margin-top: 30px;
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.item {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 1fr;
+    color: #fff;
+    background: #6c7a89;
+
+    > div {
+        display: flex;
+        align-items: center;
+
+        span {
+            color: lightgray;
+            text-transform: uppercase;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+        margin-left: 10px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .remove-btn {
+        cursor: pointer;
+
+        i { 
+            color: #fff;
+            transition: .3s ease-out;
+        }
+
+        &:hover i {
+            color: #ff9478;
+        }
+    }
+}
+
+.btc {
+    background: #67809f;
+}
+
+.adding {
+    animation: anim .5s ease-out;
+}
+
+@keyframes anim {
+    from { opacity: 0; visibility: hidden; transform: translateY(-20px) }
+    to { opacity: 1; visibility: visible; text-replace: translateY(0); }
+}
+
+.removing {
+    animation: deleteAnimation .5s ease-out;
+}
+
+@keyframes deleteAnimation {
+    from { opacity: 1; visibility: visible; transform: translateY(0) }
+    to { opacity: 0; visibility: hidden; transform: translateY(-20px) }
+}
